@@ -2,6 +2,11 @@
 
 這是課程作業用的公開 repo。
 
+| | |
+|---|---|
+| **繳交期限** | 9 月 2 日（三）23:59 |
+| **完成標準** | 發出 Pull Request，內容確認沒問題就算完成 |
+
 **請不要直接推送到這裡**，你也沒有權限這樣做。
 交作業的方式是 **Fork + Pull Request**，這也是所有開源專案的標準流程。
 
@@ -63,6 +68,13 @@ git push -u origin 你的名字-intro
 
 > 這裡的 `origin` 是**你的 fork**，不是這個原始 repo，所以你 push 得上去。
 
+**第一次 push 會要求登入 GitHub**，這是正常的，不是你做錯了。
+畫面上會跳出一個視窗，選 **Sign in with your browser**，
+瀏覽器登入一次之後就會記住，之後不會再問。
+
+> 如果視窗被你不小心關掉，或是一直登入失敗，
+> 重新執行一次 `git push` 就會再跳出來。
+
 ### 步驟 6：發 Pull Request
 
 1. push 完回到 GitHub，頁面上方會出現 **Compare & pull request** 按鈕
@@ -77,9 +89,10 @@ Fork → Clone → Branch → Commit → Push → Pull Request → Merge
 
 ## 交件標準
 
-- **PR 開出來就算完成**，不用等到被合併。
-- Review 沒問題就會合併進來。
-- 如果 review 後留言請你修改，不用重開 PR——在**同一個分支**再 commit + push 一次，PR 會自動更新。
+- **繳交期限：9 月 2 日（三）23:59**
+- **發出 PR、內容確認沒問題，作業就算完成。**
+- 如果有地方需要修改，會直接在你的 PR 底下留言。
+  不用重開 PR——在**同一個分支**再 commit + push 一次，PR 會自動更新。
 
 ---
 
@@ -103,6 +116,8 @@ Fork → Clone → Branch → Commit → Push → Pull Request → Merge
 
 | 狀況 | 原因 | 怎麼辦 |
 |------|------|--------|
+| 第一次 `push` 跳出登入視窗 | 需要 GitHub 身分驗證，正常現象 | 選 **Sign in with your browser**，登入一次就會記住 |
+| 終端機顯示 `"students/\347\216\213..."` | 中文檔名被跳脫顯示 | `git config --global core.quotepath false` |
 | `push` 出現 403 / permission denied | clone 到原始 repo 了 | 確認網址是你的帳號，重新 clone |
 | PR 頁面找不到你的修改 | 忘記 push 分支 | `git push -u origin <你的分支名>` |
 | PR 方向選成自己的 fork | base 選錯 | 把 base 改成原始 repo 的 `main` |
